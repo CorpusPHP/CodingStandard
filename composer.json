@@ -1,0 +1,23 @@
+{
+	"name": "corpus/coding-standard",
+	"type": "phpcodesniffer-standard",
+	"require": {
+		"squizlabs/php_codesniffer": "*",
+		"php": ">=7.1"
+	},
+	"require-dev": {
+		"dealerdirect/phpcodesniffer-composer-installer": "*",
+		"donatj/drop": "^1.0"
+	},
+	"authors": [
+		{
+			"name": "Jesse Donat",
+			"email": "donatj@gmail.com"
+		}
+	],
+	"autoload": {
+		"psr-0": {
+			"Corpus\\": "src/"
+		}
+	}
+}
