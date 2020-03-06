@@ -1,5 +1,7 @@
 {
 	"name": "corpus/coding-standard",
+	"description": "Corpus Coding Standard for PHP_CodeSniffer",
+	"license": "MIT",
 	"type": "phpcodesniffer-standard",
 	"require": {
 		"squizlabs/php_codesniffer": "*",
