@@ -12,7 +12,7 @@ class MethodParameterFormattingSniff implements Sniff {
 	public const CODE_OVERLY_LONG_ARGUMENT_LIST = 'OverlyLongArgumentList';
 
 	public function register() {
-		return [ T_FUNCTION ];
+		return [ T_FUNCTION, T_CLOSURE ];
 	}
 
 	public function process( File $phpcsFile, $stackPtr ) {
@@ -28,8 +28,13 @@ class MethodParameterFormattingSniff implements Sniff {
 			return;
 		}
 
-		$stmtStartPtr = $phpcsFile->findStartOfStatement($stackPtr);
-		$indent       = str_repeat("\t", $tokens[$stmtStartPtr]['column']);
+
+		$stmtStartPtr = $phpcsFile->findFirstOnLine([], $stackPtr, true);
+		if( $tokens[$stmtStartPtr]['code'] === T_WHITESPACE ) {
+			$stmtStartPtr++;
+		}
+
+		$indent = str_repeat("\t", $tokens[$stmtStartPtr]['column']);
 
 		$fix = $phpcsFile->addFixableError(
 			"Single line function definition exceeds %d characters",
