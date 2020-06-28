@@ -64,6 +64,9 @@ class MethodParameterFormattingSniff implements Sniff {
 				}
 			}
 
+			if( $tokens[$endPtr - 1]['code'] === T_WHITESPACE ) {
+				$phpcsFile->fixer->replaceToken($endPtr - 1, '');
+			}
 
 			$phpcsFile->fixer->addContentBefore(
 				$endPtr,
