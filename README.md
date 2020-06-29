@@ -50,15 +50,6 @@ if( $foo ) {
 echo $baz;
 ```
 
-```php
-<?php
-namespace Corpus\Sniffs\ControlStructures;
-
-class ClosingBraceNewlineSniff {
-	public const CODE_MUST_NEWLINE_FOLLOWING_CURLY_BRACKET = 'MustNewlineFollowingCurlyBracket';
-}
-```
-
 ### Class: \Corpus\Sniffs\ControlStructures\OpeningOneTrueBraceSniff
 
 Sniff: `Corpus.ControlStructures.OpeningOneTrueBrace`
@@ -87,15 +78,6 @@ class Foo {
 }
 ```
 
-```php
-<?php
-namespace Corpus\Sniffs\ControlStructures;
-
-class OpeningOneTrueBraceSniff {
-	public const CODE_BRACE_ON_NEWLINE = 'BraceOnNewLine';
-}
-```
-
 ### Class: \Corpus\Sniffs\General\BinaryOperationNewlineSniff
 
 Sniff: `Corpus.General.BinaryOperationNewline`
@@ -120,15 +102,6 @@ if(
     && $bar
     && $baz
 )}
-```
-
-```php
-<?php
-namespace Corpus\Sniffs\General;
-
-class BinaryOperationNewlineSniff {
-	public const CODE_BOOLEAN_OPERATION_SHOULD_LEAD_LINE = 'BooleanOperationShouldLeadLine';
-}
 ```
 
 ### Inherited Sniffs

@@ -14,7 +14,10 @@ Corpus Coding Standard for [PHP_CodeSniffer](https://github.com/squizlabs/PHP_Co
 				<composer-install dev="true"/>
 			</section>
 			<section title="Sniffs">
-				<recursive-directory name="src/Corpus/Sniffs" method-filter="/$a/"/>
+				<recursive-directory
+						name="src/Corpus/Sniffs"
+						method-filter="/$a/"
+						skip-class-constants="true" />
 				<section title="Inherited Sniffs">
 					<exec cmd="php tools/inherited-rules.php"/>
 				</section>
