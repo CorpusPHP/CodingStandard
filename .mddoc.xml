@@ -1,10 +1,10 @@
 <mddoc>
 	<docpage target="README.md" autoloader="psr0" autoloader-root="src">
 		<section title="Corpus Coding Standard">
-			<badge-poser type="version" />
-			<badge-poser type="downloads" />
-			<badge-poser type="license" />
-			<badge-github-action name="CorpusPHP/CodingStandard" workflow="CI" />
+			<badge-poser type="version"/>
+			<badge-poser type="downloads"/>
+			<badge-poser type="license"/>
+			<badge-github-action name="CorpusPHP/CodingStandard" workflow="CI"/>
 			<text><![CDATA[
 Corpus Coding Standard for [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer).]]></text>
 			<section title="Requirements">
@@ -15,6 +15,9 @@ Corpus Coding Standard for [PHP_CodeSniffer](https://github.com/squizlabs/PHP_Co
 			</section>
 			<section title="Sniffs">
 				<recursive-directory name="src/Corpus/Sniffs" method-filter="/$a/"/>
+				<section title="Inherited Sniffs">
+					<exec cmd="php tools/inherited-rules.php"/>
+				</section>
 			</section>
 		</section>
 	</docpage>
