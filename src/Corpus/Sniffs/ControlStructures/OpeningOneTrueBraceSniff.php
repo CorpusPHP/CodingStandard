@@ -10,6 +10,28 @@ use PHP_CodeSniffer\Sniffs\Sniff;
  *
  * Ensure that the K&R "One True Brace" style is used.
  *
+ * **Example:**
+ *
+ * ```php
+ * class Foo
+ * {
+ *     public function bar()
+ *     {
+ *         echo "bbq";
+ *     }
+ * }
+ * ```
+ *
+ * Becomes:
+ *
+ * ```php
+ * class Foo {
+ *     public function bar() {
+ *         echo "bbq";
+ *     }
+ * }
+ * ```
+ *
  * @see https://wiki.c2.com/?OneTrueBraceStyle
  */
 class OpeningOneTrueBraceSniff implements Sniff {

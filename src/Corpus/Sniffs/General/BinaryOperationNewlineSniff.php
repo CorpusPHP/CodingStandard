@@ -12,7 +12,7 @@ use PHP_CodeSniffer\Sniffs\Sniff;
  *
  * **Example:**
  *
- * ```
+ * ```php
  * if(
  *     $foo &&
  *     $bar &&
@@ -20,7 +20,7 @@ use PHP_CodeSniffer\Sniffs\Sniff;
  * ){}
  * ```
  *
- * becomes
+ * Becomes:
  *
  * ```php
  * if(

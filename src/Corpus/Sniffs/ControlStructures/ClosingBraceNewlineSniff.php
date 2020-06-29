@@ -9,6 +9,25 @@ use PHP_CodeSniffer\Sniffs\Sniff;
  * Sniff: `Corpus.ControlStructures.ClosingBraceNewline`
  *
  * Ensure that all closing curly brackets are followed by a blank line.
+ *
+ * **Example:**
+ *
+ * ```php
+ * if( $foo ) {
+ *     echo $bar;
+ * }
+ * echo $baz;
+ * ```
+ *
+ * Becomes:
+ *
+ * ```php
+ * if( $foo ) {
+ *     echo $bar;
+ * }
+ *
+ * echo $baz;
+ * ```
  */
 class ClosingBraceNewlineSniff implements Sniff {
 

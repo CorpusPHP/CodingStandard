@@ -31,6 +31,25 @@ Sniff: `Corpus.ControlStructures.ClosingBraceNewline`
 
 Ensure that all closing curly brackets are followed by a blank line.
 
+**Example:**
+
+```php
+if( $foo ) {
+    echo $bar;
+}
+echo $baz;
+```
+
+Becomes:
+
+```php
+if( $foo ) {
+    echo $bar;
+}
+
+echo $baz;
+```
+
 ```php
 <?php
 namespace Corpus\Sniffs\ControlStructures;
@@ -45,6 +64,28 @@ class ClosingBraceNewlineSniff {
 Sniff: `Corpus.ControlStructures.OpeningOneTrueBrace`
 
 Ensure that the K&R "One True Brace" style is used.
+
+**Example:**
+
+```php
+class Foo
+{
+    public function bar()
+    {
+        echo "bbq";
+    }
+}
+```
+
+Becomes:
+
+```php
+class Foo {
+    public function bar() {
+        echo "bbq";
+    }
+}
+```
 
 ```php
 <?php
@@ -63,7 +104,7 @@ Ensure that in multiline logical statments `&&` and `||` lead lines rather than 
 
 **Example:**
 
-```
+```php
 if(
     $foo &&
     $bar &&
@@ -71,7 +112,7 @@ if(
 )}
 ```
 
-becomes
+Becomes:
 
 ```php
 if(
