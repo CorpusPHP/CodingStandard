@@ -1,0 +1,18 @@
+<mddoc>
+	<docpage target="README.md" autoloader="psr0" autoloader-root="src">
+		<section title="Corpus Coding Standard">
+			<badge-poser type="version" />
+			<badge-poser type="downloads" />
+			<badge-poser type="license" />
+			<badge-github-action name="CorpusPHP/CodingStandard" workflow="CI" />
+			<text><![CDATA[
+Corpus Coding Standard for [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer).]]></text>
+			<section title="Requirements">
+				<composer-requires/>
+			</section>
+			<section title="Installing">
+				<composer-install dev="true"/>
+			</section>
+		</section>
+	</docpage>
+</mddoc>
