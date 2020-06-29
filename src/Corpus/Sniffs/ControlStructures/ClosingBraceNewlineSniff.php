@@ -5,6 +5,11 @@ namespace Corpus\Sniffs\ControlStructures;
 use PHP_CodeSniffer\Files\File;
 use PHP_CodeSniffer\Sniffs\Sniff;
 
+/**
+ * Sniff: `Corpus.ControlStructures.ClosingBraceNewline`
+ *
+ * Ensure that all closing curly brackets are followed by a blank line.
+ */
 class ClosingBraceNewlineSniff implements Sniff {
 
 	public const CODE_MUST_NEWLINE_FOLLOWING_CURLY_BRACKET = 'MustNewlineFollowingCurlyBracket';

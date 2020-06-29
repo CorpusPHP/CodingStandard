@@ -5,6 +5,13 @@ namespace Corpus\Sniffs\ControlStructures;
 use PHP_CodeSniffer\Files\File;
 use PHP_CodeSniffer\Sniffs\Sniff;
 
+/**
+ * Sniff: `Corpus.ControlStructures.OpeningOneTrueBrace`
+ *
+ * Ensure that the K&R "One True Brace" style is used.
+ *
+ * @see https://wiki.c2.com/?OneTrueBraceStyle
+ */
 class OpeningOneTrueBraceSniff implements Sniff {
 
 	public const CODE_BRACE_ON_NEWLINE = 'BraceOnNewLine';
