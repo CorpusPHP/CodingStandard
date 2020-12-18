@@ -44,6 +44,7 @@ class OpeningOneTrueBraceSniff implements Sniff {
 			for( $i = $prev + 1; $i < $stackPtr; $i++ ) {
 				$phpcsFile->fixer->replaceToken($i, $i === $stackPtr - 1 ? ' ' : '');
 			}
+
 			$phpcsFile->fixer->endChangeset();
 		}
 	}

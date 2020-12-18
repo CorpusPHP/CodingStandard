@@ -53,4 +53,5 @@ class ClosingBraceNewlineSniff implements Sniff {
 			$phpcsFile->fixer->endChangeset();
 		}
 	}
+
 }
