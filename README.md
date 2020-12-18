@@ -10,7 +10,9 @@ Corpus Coding Standard for [PHP_CodeSniffer](https://github.com/squizlabs/PHP_Co
 
 ## Requirements
 
+- **dealerdirect/phpcodesniffer-composer-installer**: *
 - **squizlabs/php_codesniffer**: *
+- **slevomat/coding-standard**: ~6.4.1
 - **php**: >=7.1
 
 ## Installing
