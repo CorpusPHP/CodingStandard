@@ -22,3 +22,70 @@ Install the latest version with:
 ```bash
 composer require --dev 'corpus/coding-standard'
 ```
+
+## Sniffs
+
+### Class: \Corpus\Sniffs\ControlStructures\ClosingBraceNewlineSniff
+
+Sniff: `Corpus.ControlStructures.ClosingBraceNewline`
+
+Ensure that all closing curly brackets are followed by a blank line.
+
+```php
+<?php
+namespace Corpus\Sniffs\ControlStructures;
+
+class ClosingBraceNewlineSniff {
+	public const CODE_MUST_NEWLINE_FOLLOWING_CURLY_BRACKET = 'MustNewlineFollowingCurlyBracket';
+}
+```
+
+### Class: \Corpus\Sniffs\ControlStructures\OpeningOneTrueBraceSniff
+
+Sniff: `Corpus.ControlStructures.OpeningOneTrueBrace`
+
+Ensure that the K&R "One True Brace" style is used.
+
+```php
+<?php
+namespace Corpus\Sniffs\ControlStructures;
+
+class OpeningOneTrueBraceSniff {
+	public const CODE_BRACE_ON_NEWLINE = 'BraceOnNewLine';
+}
+```
+
+### Class: \Corpus\Sniffs\General\BinaryOperationNewlineSniff
+
+Sniff: `Corpus.General.BinaryOperationNewline`
+
+Ensure that in multiline logical statments `&&` and `||` lead lines rather than trail.
+
+**Example:**
+
+```
+if(
+    $foo &&
+    $bar &&
+    $baz
+)}
+```
+
+becomes
+
+```php
+if(
+    $foo
+    && $bar
+    && $baz
+)}
+```
+
+```php
+<?php
+namespace Corpus\Sniffs\General;
+
+class BinaryOperationNewlineSniff {
+	public const CODE_BOOLEAN_OPERATION_SHOULD_LEAD_LINE = 'BooleanOperationShouldLeadLine';
+}
+```

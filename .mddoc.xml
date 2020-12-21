@@ -13,6 +13,9 @@ Corpus Coding Standard for [PHP_CodeSniffer](https://github.com/squizlabs/PHP_Co
 			<section title="Installing">
 				<composer-install dev="true"/>
 			</section>
+			<section title="Sniffs">
+				<recursive-directory name="src/Corpus/Sniffs" method-filter="/$a/"/>
+			</section>
 		</section>
 	</docpage>
 </mddoc>
