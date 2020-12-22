@@ -8,7 +8,7 @@ use PHP_CodeSniffer\Sniffs\Sniff;
 /**
  * Sniff: `Corpus.General.BinaryOperationNewline`
  *
- * Ensure that in multiline logical statments `&&` and `||` lead lines rather than trail.
+ * Ensure that in multiline logical statements `&&` and `||` lead lines rather than trail.
  *
  * **Example:**
  *
@@ -29,7 +29,6 @@ use PHP_CodeSniffer\Sniffs\Sniff;
  *     && $baz
  * ){}
  * ```
- *
  */
 class BinaryOperationNewlineSniff implements Sniff {
 

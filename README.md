@@ -82,7 +82,7 @@ class Foo {
 
 Sniff: `Corpus.General.BinaryOperationNewline`
 
-Ensure that in multiline logical statments `&&` and `||` lead lines rather than trail.
+Ensure that in multiline logical statements `&&` and `||` lead lines rather than trail.
 
 **Example:**
 
@@ -102,6 +102,39 @@ if(
     && $bar
     && $baz
 )}
+```
+
+### Class: \Corpus\Sniffs\Methods\MethodParameterFormattingSniff
+
+Sniff: `Corpus.Methods.MethodParameterFormatting`
+
+Set a maximum length for function arguments. Fix by breaking into multiple lines.
+
+**Example:**
+
+```php
+function Foo( ClosingBraceNewlineSniffTest $closingBraceNewlineSniffTest, OpeningOneTrueBraceSniffTest $openingOneTrueBraceSniffTest ) }
+```
+
+ Becomes:
+
+```php
+function Foo(
+    ClosingBraceNewlineSniffTest $closingBraceNewlineSniffTest,
+    OpeningOneTrueBraceSniffTest $openingOneTrueBraceSniffTest
+) }
+```
+
+```php
+<?php
+namespace Corpus\Sniffs\Methods;
+
+class MethodParameterFormattingSniff {
+	/**
+	 * Maximum line character length after which to break function arguments into newlines
+	 */
+	public $maxLength = 130;
+}
 ```
 
 ### Inherited Sniffs

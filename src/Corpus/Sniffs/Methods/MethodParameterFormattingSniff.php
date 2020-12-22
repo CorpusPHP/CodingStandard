@@ -5,16 +5,43 @@ namespace Corpus\Sniffs\Methods;
 use PHP_CodeSniffer\Files\File;
 use PHP_CodeSniffer\Sniffs\Sniff;
 
+/**
+ * Sniff: `Corpus.Methods.MethodParameterFormatting`
+ *
+ * Set a maximum length for function arguments. Fix by breaking into multiple lines.
+ *
+ * **Example:**
+ *
+ * ```php
+ * function Foo( ClosingBraceNewlineSniffTest $closingBraceNewlineSniffTest, OpeningOneTrueBraceSniffTest $openingOneTrueBraceSniffTest ) {}
+ * ```
+ *
+ *  Becomes:
+ *
+ * ```php
+ * function Foo(
+ *     ClosingBraceNewlineSniffTest $closingBraceNewlineSniffTest,
+ *     OpeningOneTrueBraceSniffTest $openingOneTrueBraceSniffTest
+ * ) {}
+ * ```
+ */
 class MethodParameterFormattingSniff implements Sniff {
 
+	/** Maximum line character length after which to break function arguments into newlines */
 	public $maxLength = 130;
 
 	public const CODE_OVERLY_LONG_ARGUMENT_LIST = 'OverlyLongArgumentList';
 
+	/**
+	 * @inheritDoc
+	 */
 	public function register() {
 		return [ T_FUNCTION, T_CLOSURE ];
 	}
 
+	/**
+	 * @inheritDoc
+	 */
 	public function process( File $phpcsFile, $stackPtr ) {
 		$tokens = $phpcsFile->getTokens();
 
@@ -27,7 +54,6 @@ class MethodParameterFormattingSniff implements Sniff {
 		if( $tokens[$scopePtr]['column'] < $this->maxLength ) {
 			return;
 		}
-
 
 		$stmtStartPtr = $phpcsFile->findFirstOnLine([], $stackPtr, true);
 		if( $tokens[$stmtStartPtr]['code'] === T_WHITESPACE ) {
