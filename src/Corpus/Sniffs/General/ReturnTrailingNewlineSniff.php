@@ -5,6 +5,28 @@ namespace Corpus\Sniffs\General;
 use PHP_CodeSniffer\Files\File;
 use PHP_CodeSniffer\Sniffs\Sniff;
 
+/**
+ * Sniff: `Corpus.General.ReturnTrailingNewline`
+ *
+ * Ensure that no blank lines separate return statements and following curly braces.
+ *
+ * **Example:**
+ *
+ * ```php
+ * if( $foo == true ){
+ *     return 1;
+ *
+ * }
+ * ```
+ *
+ * Becomes:
+ *
+ * ```php
+ * if( $foo == true ){
+ *     return 1;
+ * }
+ * ```
+ */
 class ReturnTrailingNewlineSniff implements Sniff {
 
 	public const CODE_RETURN_HAS_TRAILING_NEWLINE = 'ReturnHasTrailingNewline';

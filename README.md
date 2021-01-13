@@ -104,6 +104,29 @@ if(
 )}
 ```
 
+### Class: \Corpus\Sniffs\General\ReturnTrailingNewlineSniff
+
+Sniff: `Corpus.General.ReturnTrailingNewline`
+
+Ensure that no blank lines separate return statements and following curly braces.
+
+**Example:**
+
+```php
+if( $foo == true ){
+    return 1;
+
+}
+```
+
+Becomes:
+
+```php
+if( $foo == true ){
+    return 1;
+}
+```
+
 ### Class: \Corpus\Sniffs\Methods\MethodParameterFormattingSniff
 
 Sniff: `Corpus.Methods.MethodParameterFormatting`
