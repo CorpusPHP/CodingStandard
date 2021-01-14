@@ -13,7 +13,7 @@ use PHP_CodeSniffer\Sniffs\Sniff;
  * **Example:**
  *
  * ```php
- * function Foo( ClosingBraceNewlineSniffTest $closingBraceNewlineSniffTest, OpeningOneTrueBraceSniffTest $openingOneTrueBraceSniffTest ) {}
+ * function Foo( ClosingBraceNewlineSniffTest $closingBraceNewlineSniffTest, OpeningOneTrueBraceSniffTest $openingOneTrueBraceSniffTest ) { }
  * ```
  *
  *  Becomes:
@@ -22,7 +22,7 @@ use PHP_CodeSniffer\Sniffs\Sniff;
  * function Foo(
  *     ClosingBraceNewlineSniffTest $closingBraceNewlineSniffTest,
  *     OpeningOneTrueBraceSniffTest $openingOneTrueBraceSniffTest
- * ) {}
+ * ) { }
  * ```
  */
 class MethodParameterFormattingSniff implements Sniff {
