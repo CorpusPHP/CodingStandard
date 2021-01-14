@@ -136,7 +136,7 @@ Set a maximum length for function arguments. Fix by breaking into multiple lines
 **Example:**
 
 ```php
-function Foo( ClosingBraceNewlineSniffTest $closingBraceNewlineSniffTest, OpeningOneTrueBraceSniffTest $openingOneTrueBraceSniffTest ) }
+function Foo( ClosingBraceNewlineSniffTest $closingBraceNewlineSniffTest, OpeningOneTrueBraceSniffTest $openingOneTrueBraceSniffTest ) { }
 ```
 
  Becomes:
@@ -145,7 +145,7 @@ function Foo( ClosingBraceNewlineSniffTest $closingBraceNewlineSniffTest, Openin
 function Foo(
     ClosingBraceNewlineSniffTest $closingBraceNewlineSniffTest,
     OpeningOneTrueBraceSniffTest $openingOneTrueBraceSniffTest
-) }
+) { }
 ```
 
 ```php
