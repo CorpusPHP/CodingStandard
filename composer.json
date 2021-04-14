@@ -6,7 +6,7 @@
 	"require": {
 		"dealerdirect/phpcodesniffer-composer-installer": "*",
 		"squizlabs/php_codesniffer": "*",
-		"slevomat/coding-standard": "~6.4.1",
+		"slevomat/coding-standard": "~7.0.2",
 		"php": ">=7.1"
 	},
 	"require-dev": {
