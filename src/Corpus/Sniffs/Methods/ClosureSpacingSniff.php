@@ -6,7 +6,7 @@ use PHP_CodeSniffer\Files\File;
 use PHP_CodeSniffer\Sniffs\Sniff;
 
 /**
- * Sniff: `Corpus.Methods.ClosureSpacingSniff`
+ * Sniff: `Corpus.Methods.ClosureSpacing`
  *
  * Disallow whitespace between function/fn keyword and opening paren on closures.
  *

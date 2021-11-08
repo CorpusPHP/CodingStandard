@@ -129,7 +129,7 @@ if( $foo == true ){
 
 ### Class: \Corpus\Sniffs\Methods\ClosureSpacingSniff
 
-Sniff: `Corpus.Methods.ClosureSpacingSniff`
+Sniff: `Corpus.Methods.ClosureSpacing`
 
 Disallow whitespace between function/fn keyword and opening paren on closures.
 
