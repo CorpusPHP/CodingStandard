@@ -27,6 +27,13 @@ try {
 
 echo "ok";
 
+if(true) {
+
+}echo "it's not on it's own line";
+
+if(true) {  } // don't fix
+echo "there's junk at the end of the previous line";
+
 //don't fix
 for(;;){
 }
