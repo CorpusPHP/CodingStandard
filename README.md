@@ -3,7 +3,7 @@
 [![Latest Stable Version](https://poser.pugx.org/corpus/coding-standard/version)](https://packagist.org/packages/corpus/coding-standard)
 [![Total Downloads](https://poser.pugx.org/corpus/coding-standard/downloads)](https://packagist.org/packages/corpus/coding-standard)
 [![License](https://poser.pugx.org/corpus/coding-standard/license)](https://packagist.org/packages/corpus/coding-standard)
-[![Build Status](https://github.com/CorpusPHP/CodingStandard/workflows/CI/badge.svg?)](https://github.com/CorpusPHP/CodingStandard/actions?query=workflow%3ACI)
+[![CI](https://github.com/CorpusPHP/CodingStandard/workflows/CI/badge.svg?)](https://github.com/CorpusPHP/CodingStandard/actions?query=workflow%3ACI)
 
 
 Corpus Coding Standard for [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer).
@@ -12,7 +12,7 @@ Corpus Coding Standard for [PHP_CodeSniffer](https://github.com/squizlabs/PHP_Co
 
 - **dealerdirect/phpcodesniffer-composer-installer**: *
 - **squizlabs/php_codesniffer**: *
-- **slevomat/coding-standard**: ~6.4.1
+- **slevomat/coding-standard**: ~7.0.2
 - **php**: >=7.1
 
 ## Installing
@@ -127,6 +127,26 @@ if( $foo == true ){
 }
 ```
 
+### Class: \Corpus\Sniffs\Methods\ClosureSpacingSniff
+
+Sniff: `Corpus.Methods.ClosureSpacingSniff`
+
+Disallow whitespace between function/fn keyword and opening paren on closures.
+
+**Example:**
+
+```php
+$foo = function ( string $foo ) { echo $foo; };
+$bar = fn ( int $bar ) => $bar + 1;
+```
+
+Becomes:
+
+```php
+$foo = function( string $foo ) { echo $foo; };
+$bar = fn( int $bar ) => $bar + 1;
+```
+
 ### Class: \Corpus\Sniffs\Methods\MethodParameterFormattingSniff
 
 Sniff: `Corpus.Methods.MethodParameterFormatting`
@@ -139,7 +159,7 @@ Set a maximum length for function arguments. Fix by breaking into multiple lines
 function Foo( ClosingBraceNewlineSniffTest $closingBraceNewlineSniffTest, OpeningOneTrueBraceSniffTest $openingOneTrueBraceSniffTest ) { }
 ```
 
- Becomes:
+Becomes:
 
 ```php
 function Foo(

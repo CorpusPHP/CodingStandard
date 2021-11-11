@@ -16,7 +16,7 @@ use PHP_CodeSniffer\Sniffs\Sniff;
  * function Foo( ClosingBraceNewlineSniffTest $closingBraceNewlineSniffTest, OpeningOneTrueBraceSniffTest $openingOneTrueBraceSniffTest ) { }
  * ```
  *
- *  Becomes:
+ * Becomes:
  *
  * ```php
  * function Foo(
