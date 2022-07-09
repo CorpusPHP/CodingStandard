@@ -13,7 +13,7 @@ class ReturnTrailingNewlineSniffTest extends TestCase {
 		self::assertAllFixedInFile($report);
 	}
 
-	public function testRootReturn() : void{
+	public function testRootReturn() : void {
 		$report = self::checkFile(__DIR__ . '/ReturnTrailingNewline.data/rootreturn.php');
 		$this->assertSame(0, $report->getErrorCount());
 	}
