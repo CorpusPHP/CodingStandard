@@ -8,7 +8,7 @@ use PHP_CodeSniffer\Sniffs\Sniff;
 /**
  * Sniff: `Corpus.Methods.ClosureSpacing`
  *
- * Disallow whitespace between function/fn keyword and opening paren on closures.
+ * Force whitespace between function/fn keyword and opening paren on closures.
  *
  * **Example:**
  *
@@ -39,12 +39,26 @@ class ClosureSpacingSniff implements Sniff {
 		$tokens  = $phpcsFile->getTokens();
 		$nextPtr = $stackPtr + 1;
 
-		if( isset($tokens[$nextPtr]['code']) && $tokens[$nextPtr]['code'] === T_WHITESPACE ) {
-			$fix = $phpcsFile->addFixableError('Unnecessary whitespace following closure keyword.', $nextPtr, self::CODE_BAD_CLOSURE_LEADING_WHITESPACE);
-			if( $fix === true ) {
-				$phpcsFile->fixer->beginChangeset();
-				$phpcsFile->fixer->replaceToken($nextPtr, '');
-				$phpcsFile->fixer->endChangeset();
+		if( isset($tokens[$nextPtr]['code']) ) {
+
+			if( $tokens[$nextPtr]['code'] !== T_WHITESPACE ) {
+				$fix = $phpcsFile->addFixableError('Missing whitespace following closure keyword.', $nextPtr, self::CODE_BAD_CLOSURE_LEADING_WHITESPACE);
+				if( $fix === true ) {
+					$phpcsFile->fixer->beginChangeset();
+					$phpcsFile->fixer->addContentBefore($nextPtr, ' ');
+					$phpcsFile->fixer->endChangeset();
+				}
+
+				return;
+			}
+
+			if($tokens[$nextPtr]['content'] !== ' ') {
+				$fix = $phpcsFile->addFixableError('Incorrect whitespace following closure keyword.', $nextPtr, self::CODE_BAD_CLOSURE_LEADING_WHITESPACE);
+				if( $fix === true ) {
+					$phpcsFile->fixer->beginChangeset();
+					$phpcsFile->fixer->replaceToken($nextPtr, ' ');
+					$phpcsFile->fixer->endChangeset();
+				}
 			}
 		}
 	}
