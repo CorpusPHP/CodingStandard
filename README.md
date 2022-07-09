@@ -131,7 +131,7 @@ if( $foo == true ){
 
 Sniff: `Corpus.Methods.ClosureSpacing`
 
-Disallow whitespace between function/fn keyword and opening paren on closures.
+Force whitespace between function/fn keyword and opening paren on closures.
 
 **Example:**
 
