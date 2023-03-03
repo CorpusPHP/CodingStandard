@@ -38,17 +38,11 @@ class OpeningOneTrueBraceSniff implements Sniff {
 
 	public const CODE_BRACE_ON_NEWLINE = 'BraceOnNewLine';
 
-	/**
-	 * @inheritDoc
-	 */
-	public function register() {
+	public function register() : array {
 		return [ T_OPEN_CURLY_BRACKET ];
 	}
 
-	/**
-	 * @inheritDoc
-	 */
-	public function process( File $phpcsFile, $stackPtr ) {
+	public function process( File $phpcsFile, $stackPtr ) : void {
 		$tokens = $phpcsFile->getTokens();
 		$prev   = $phpcsFile->findPrevious(T_WHITESPACE, $stackPtr - 1, 0, true);
 		if( !$prev || $tokens[$prev]['line'] === $tokens[$stackPtr]['line'] ) {
@@ -67,7 +61,8 @@ class OpeningOneTrueBraceSniff implements Sniff {
 		$fix = $phpcsFile->addFixableError(
 			'Opening brace should be on the same line as the declaration',
 			$stackPtr,
-			self::CODE_BRACE_ON_NEWLINE);
+			self::CODE_BRACE_ON_NEWLINE
+		);
 		if( $fix ) {
 			$phpcsFile->fixer->beginChangeset();
 			for( $i = $prev + 1; $i < $stackPtr; $i++ ) {

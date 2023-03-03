@@ -33,17 +33,11 @@ class ClosingBraceNewlineSniff implements Sniff {
 
 	public const CODE_MUST_NEWLINE_FOLLOWING_CURLY_BRACKET = 'MustNewlineFollowingCurlyBracket';
 
-	/**
-	 * @inheritDoc
-	 */
-	public function register() {
+	public function register() : array {
 		return [ T_CLOSE_CURLY_BRACKET ];
 	}
 
-	/**
-	 * @inheritDoc
-	 */
-	public function process( File $phpcsFile, $stackPtr ) {
+	public function process( File $phpcsFile, $stackPtr ) : void {
 		$tokens = $phpcsFile->getTokens();
 
 		$prevPtr = $phpcsFile->findPrevious(T_WHITESPACE, $stackPtr - 1, null, true);
@@ -68,9 +62,11 @@ class ClosingBraceNewlineSniff implements Sniff {
 			return;
 		}
 
-		$fix = $phpcsFile->addFixableError('Must be a newline following closing curly bracket',
+		$fix = $phpcsFile->addFixableError(
+			'Must be a newline following closing curly bracket',
 			$stackPtr,
-			self::CODE_MUST_NEWLINE_FOLLOWING_CURLY_BRACKET);
+			self::CODE_MUST_NEWLINE_FOLLOWING_CURLY_BRACKET
+		);
 		if( $fix ) {
 			$phpcsFile->fixer->beginChangeset();
 			$phpcsFile->fixer->addNewline($stackPtr);

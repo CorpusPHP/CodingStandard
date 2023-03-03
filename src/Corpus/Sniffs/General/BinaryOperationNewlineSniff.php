@@ -34,17 +34,11 @@ class BinaryOperationNewlineSniff implements Sniff {
 
 	public const CODE_BOOLEAN_OPERATION_SHOULD_LEAD_LINE = 'BooleanOperationShouldLeadLine';
 
-	/**
-	 * @inheritDoc
-	 */
-	public function register() {
+	public function register() : array {
 		return [ T_BOOLEAN_AND, T_BOOLEAN_OR ];
 	}
 
-	/**
-	 * @inheritDoc
-	 */
-	public function process( File $phpcsFile, $stackPtr ) {
+	public function process( File $phpcsFile, $stackPtr ) : void {
 		$tokens = $phpcsFile->getTokens();
 
 		$nextPtr = $phpcsFile->findNext(T_WHITESPACE, $stackPtr + 1, null, true);
@@ -52,7 +46,8 @@ class BinaryOperationNewlineSniff implements Sniff {
 			return;
 		}
 
-		$fix = $phpcsFile->addFixableError('Boolean %s should start line and not end previous line',
+		$fix = $phpcsFile->addFixableError(
+			'Boolean %s should start line and not end previous line',
 			$stackPtr,
 			self::CODE_BOOLEAN_OPERATION_SHOULD_LEAD_LINE,
 			[ $tokens[$stackPtr]['content'] ]
