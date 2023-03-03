@@ -31,17 +31,11 @@ class ReturnTrailingNewlineSniff implements Sniff {
 
 	public const CODE_RETURN_HAS_TRAILING_NEWLINE = 'ReturnHasTrailingNewline';
 
-	/**
-	 * @inheritDoc
-	 */
-	public function register() {
+	public function register() : array {
 		return [ T_RETURN ];
 	}
 
-	/**
-	 * @inheritDoc
-	 */
-	public function process( File $phpcsFile, $stackPtr ) {
+	public function process( File $phpcsFile, $stackPtr ) : void {
 		$tokens = $phpcsFile->getTokens();
 
 		$eosPtr  = $phpcsFile->findEndOfStatement($stackPtr);

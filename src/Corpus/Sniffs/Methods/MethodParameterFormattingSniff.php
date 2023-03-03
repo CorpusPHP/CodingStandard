@@ -32,17 +32,11 @@ class MethodParameterFormattingSniff implements Sniff {
 
 	public const CODE_OVERLY_LONG_ARGUMENT_LIST = 'OverlyLongArgumentList';
 
-	/**
-	 * @inheritDoc
-	 */
-	public function register() {
+	public function register() : array {
 		return [ T_FUNCTION, T_CLOSURE ];
 	}
 
-	/**
-	 * @inheritDoc
-	 */
-	public function process( File $phpcsFile, $stackPtr ) {
+	public function process( File $phpcsFile, $stackPtr ) : void {
 		$tokens = $phpcsFile->getTokens();
 
 		$scopePtr = $tokens[$stackPtr]['scope_opener'] ?? $phpcsFile->findEndOfStatement($stackPtr);
