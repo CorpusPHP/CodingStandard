@@ -3,7 +3,7 @@
 [![Latest Stable Version](https://poser.pugx.org/corpus/coding-standard/version)](https://packagist.org/packages/corpus/coding-standard)
 [![Total Downloads](https://poser.pugx.org/corpus/coding-standard/downloads)](https://packagist.org/packages/corpus/coding-standard)
 [![License](https://poser.pugx.org/corpus/coding-standard/license)](https://packagist.org/packages/corpus/coding-standard)
-[![CI](https://github.com/CorpusPHP/CodingStandard/workflows/CI/badge.svg?)](https://github.com/CorpusPHP/CodingStandard/actions?query=workflow%3ACI)
+[![ci.yml](https://github.com/CorpusPHP/CodingStandard/actions/workflows/ci.yml/badge.svg?)](https://github.com/CorpusPHP/CodingStandard/actions/workflows/ci.yml)
 
 
 Corpus Coding Standard for [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer).
@@ -12,8 +12,8 @@ Corpus Coding Standard for [PHP_CodeSniffer](https://github.com/squizlabs/PHP_Co
 
 - **dealerdirect/phpcodesniffer-composer-installer**: *
 - **squizlabs/php_codesniffer**: *
-- **slevomat/coding-standard**: ~7.0.2
-- **php**: >=7.1
+- **slevomat/coding-standard**: ^8.3
+- **php**: >=7.4
 
 ## Installing
 

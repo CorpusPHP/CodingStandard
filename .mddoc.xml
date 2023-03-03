@@ -4,7 +4,7 @@
 			<badge-poser type="version"/>
 			<badge-poser type="downloads"/>
 			<badge-poser type="license"/>
-			<badge-github-action name="CorpusPHP/CodingStandard" workflow="CI"/>
+			<badge-github-action name="CorpusPHP/CodingStandard" workflow-file="ci.yml"/>
 			<text><![CDATA[
 Corpus Coding Standard for [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer).]]></text>
 			<section title="Requirements">
