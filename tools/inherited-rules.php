@@ -7,7 +7,7 @@ $ruleset->load(__DIR__ . '/../src/Corpus/ruleset.xml');
 
 $rules = $ruleset->getElementsByTagName('rule');
 
-$slevomatReadme = file_get_contents('https://github.com/slevomat/coding-standard/blob/master/README.md');
+$slevomatReadme = file_get_contents('https://raw.githubusercontent.com/slevomat/coding-standard/master/README.md');
 
 function makeRefLink( string $ref ) : string {
 	global $slevomatReadme;
@@ -19,14 +19,9 @@ function makeRefLink( string $ref ) : string {
 	}
 
 	if( $parts[0] === 'SlevomatCodingStandard' ) {
-		$anchor = strtolower($ref);
-		$anchor = preg_replace('/\W/', '', $anchor);
-		if( strpos($slevomatReadme, "#$anchor-\"") ) {
-			return "[{$ref}](https://github.com/slevomat/coding-standard/blob/master/README.md#{$anchor}-)";
-		}
-
-		if( strpos($slevomatReadme, "#$anchor\"") ) {
-			return "[{$ref}](https://github.com/slevomat/coding-standard/blob/master/README.md#{$anchor})";
+		preg_match('/\['.preg_quote($ref).'\]\(([^)]+)\)/im', $slevomatReadme, $matches);
+		if($matches) {
+			return "[{$ref}](https://github.com/slevomat/coding-standard/blob/master/{$matches[1]})";
 		}
 	}
 

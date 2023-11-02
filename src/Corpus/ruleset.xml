@@ -56,4 +56,6 @@
 	<rule ref="SlevomatCodingStandard.Classes.ParentCallSpacing"/>
 	<rule ref="SlevomatCodingStandard.ControlStructures.NewWithoutParentheses"/>
 	<rule ref="SlevomatCodingStandard.Commenting.UselessFunctionDocComment"/>
+	<rule ref="SlevomatCodingStandard.Classes.RequireSelfReference"/>
+	<rule ref="SlevomatCodingStandard.ControlStructures.NewWithoutParentheses"/>
 </ruleset>
