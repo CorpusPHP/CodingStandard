@@ -28,8 +28,12 @@ function makeRefLink( string $ref ) : string {
 	return $ref;
 }
 
-/** @var \DOMNode $rule */
+/** @var \DOMElement $rule */
 foreach( $rules as $rule ) {
 	echo '- ' . makeRefLink($rule->attributes->getNamedItem('ref')->nodeValue);
+	$properties = $rule->getElementsByTagName('property');
+	foreach( $properties as $property ) {
+		echo sprintf(' \[ %s=%s \]', $property->attributes->getNamedItem('name')->nodeValue, $property->attributes->getNamedItem('value')->nodeValue);
+	}
 	echo "\n";
 }
