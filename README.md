@@ -3,7 +3,7 @@
 [![Latest Stable Version](https://poser.pugx.org/corpus/coding-standard/version)](https://packagist.org/packages/corpus/coding-standard)
 [![Total Downloads](https://poser.pugx.org/corpus/coding-standard/downloads)](https://packagist.org/packages/corpus/coding-standard)
 [![License](https://poser.pugx.org/corpus/coding-standard/license)](https://packagist.org/packages/corpus/coding-standard)
-[![ci.yml](https://github.com/CorpusPHP/CodingStandard/actions/workflows/ci.yml/badge.svg?)](https://github.com/CorpusPHP/CodingStandard/actions/workflows/ci.yml)
+[![ci.yml](https://github.com/CorpusPHP/CodingStandard/actions/workflows/ci.yml/badge.svg)](https://github.com/CorpusPHP/CodingStandard/actions/workflows/ci.yml)
 
 
 Corpus Coding Standard for [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer).
@@ -25,7 +25,7 @@ composer require --dev 'corpus/coding-standard'
 
 ## Sniffs
 
-### Class: \Corpus\Sniffs\ControlStructures\ClosingBraceNewlineSniff
+### Class: Corpus\Sniffs\ControlStructures\ClosingBraceNewlineSniff
 
 Sniff: `Corpus.ControlStructures.ClosingBraceNewline`
 
@@ -50,11 +50,11 @@ if( $foo ) {
 echo $baz;
 ```
 
-### Class: \Corpus\Sniffs\ControlStructures\OpeningOneTrueBraceSniff
+### Class: Corpus\Sniffs\ControlStructures\OpeningOneTrueBraceSniff
 
 Sniff: `Corpus.ControlStructures.OpeningOneTrueBrace`
 
-Ensure that the K&R "One True Brace" style is used.
+Ensure that the "One True Brace" style is used.
 
 **Example:**
 
@@ -78,7 +78,7 @@ class Foo {
 }
 ```
 
-### Class: \Corpus\Sniffs\General\BinaryOperationNewlineSniff
+### Class: Corpus\Sniffs\General\BinaryOperationNewlineSniff
 
 Sniff: `Corpus.General.BinaryOperationNewline`
 
@@ -104,7 +104,7 @@ if(
 )}
 ```
 
-### Class: \Corpus\Sniffs\General\ReturnTrailingNewlineSniff
+### Class: Corpus\Sniffs\General\ReturnTrailingNewlineSniff
 
 Sniff: `Corpus.General.ReturnTrailingNewline`
 
@@ -127,7 +127,7 @@ if( $foo == true ){
 }
 ```
 
-### Class: \Corpus\Sniffs\Methods\ClosureSpacingSniff
+### Class: Corpus\Sniffs\Methods\ClosureSpacingSniff
 
 Sniff: `Corpus.Methods.ClosureSpacing`
 
@@ -147,7 +147,7 @@ $foo = function( string $foo ) { echo $foo; };
 $bar = fn( int $bar ) => $bar + 1;
 ```
 
-### Class: \Corpus\Sniffs\Methods\MethodParameterFormattingSniff
+### Class: Corpus\Sniffs\Methods\MethodParameterFormattingSniff
 
 Sniff: `Corpus.Methods.MethodParameterFormatting`
 

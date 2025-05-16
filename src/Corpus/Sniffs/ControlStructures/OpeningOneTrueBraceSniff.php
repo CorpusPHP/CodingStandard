@@ -8,7 +8,7 @@ use PHP_CodeSniffer\Sniffs\Sniff;
 /**
  * Sniff: `Corpus.ControlStructures.OpeningOneTrueBrace`
  *
- * Ensure that the K&R "One True Brace" style is used.
+ * Ensure that the "One True Brace" style is used.
  *
  * **Example:**
  *
