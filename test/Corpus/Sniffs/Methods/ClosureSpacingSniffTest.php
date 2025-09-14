@@ -2,7 +2,7 @@
 
 namespace Corpus\Sniffs\Methods;
 
-use SlevomatCodingStandard\Sniffs\TestCase;
+use Corpus\Sniffs\TestCase;
 
 class ClosureSpacingSniffTest extends TestCase {
 
