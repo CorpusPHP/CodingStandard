@@ -38,6 +38,7 @@ use PHP_CodeSniffer\Sniffs\Sniff;
 use PHP_CodeSniffer\Util\Common;
 
 /**
+ * @mddoc-ignore
  * @codeCoverageIgnore
  */
 abstract class TestCase extends \PHPUnit\Framework\TestCase {
