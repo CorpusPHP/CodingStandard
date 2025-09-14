@@ -2,7 +2,7 @@
 
 namespace Corpus\Sniffs\ControlStructures;
 
-use SlevomatCodingStandard\Sniffs\TestCase;
+use Corpus\Sniffs\TestCase;
 
 class ClosingBraceNewlineSniffTest extends TestCase {
 

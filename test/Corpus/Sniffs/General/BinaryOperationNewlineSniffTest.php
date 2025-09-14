@@ -2,7 +2,7 @@
 
 namespace Corpus\Sniffs\General;
 
-use SlevomatCodingStandard\Sniffs\TestCase;
+use Corpus\Sniffs\TestCase;
 
 class BinaryOperationNewlineSniffTest extends TestCase {
 
