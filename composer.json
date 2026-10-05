@@ -17,7 +17,7 @@
 		"phpunit/phpunit": "^9.6",
 		"donatj/drop": "^1.0",
 		"friendsofphp/php-cs-fixer": "^3.14",
-		"nikic/php-parser": "^4",
+		"nikic/php-parser": "^5",
 		"ext-dom": "*"
 	},
 	"authors": [
