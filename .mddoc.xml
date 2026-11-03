@@ -1,5 +1,5 @@
 <mddoc>
-	<autoloader type="psr0" root="src"/>
+	<autoloader type="composer"/>
 	<docpage target="README.md">
 		<section title="Corpus Coding Standard">
 			<badge-poser type="version"/>
