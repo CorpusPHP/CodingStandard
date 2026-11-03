@@ -7,7 +7,11 @@ $ruleset->load(__DIR__ . '/../src/Corpus/ruleset.xml');
 
 $rules = $ruleset->getElementsByTagName('rule');
 
-$slevomatReadme = file_get_contents('https://raw.githubusercontent.com/slevomat/coding-standard/master/README.md');
+$slevomatReadme = file_get_contents(__DIR__ . '/../vendor/slevomat/coding-standard/README.md');
+
+if( $slevomatReadme === false ) {
+	throw new RuntimeException('Cannot read the installed Slevomat README.');
+}
 
 function makeRefLink( string $ref ) : string {
 	global $slevomatReadme;
