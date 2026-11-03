@@ -18,7 +18,8 @@
 		"donatj/drop": "^1.0",
 		"friendsofphp/php-cs-fixer": "^3.14",
 		"nikic/php-parser": "^4",
-		"ext-dom": "*"
+		"ext-dom": "*",
+		"corpus/php-cs-fixer-config": "^0.1.1"
 	},
 	"authors": [
 		{

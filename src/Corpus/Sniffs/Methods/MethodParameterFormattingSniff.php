@@ -60,7 +60,7 @@ class MethodParameterFormattingSniff implements Sniff {
 			"Single line function definition exceeds %d characters",
 			$stackPtr,
 			self::CODE_OVERLY_LONG_ARGUMENT_LIST,
-			[ $this->maxLength ]
+			[ $this->maxLength ],
 		);
 
 		if( $fix === true ) {
@@ -90,7 +90,7 @@ class MethodParameterFormattingSniff implements Sniff {
 
 			$phpcsFile->fixer->addContentBefore(
 				$endPtr,
-				$phpcsFile->eolChar . str_repeat("\t", $tokens[$stmtStartPtr]['column'] - 1)
+				$phpcsFile->eolChar . str_repeat("\t", $tokens[$stmtStartPtr]['column'] - 1),
 			);
 
 			$phpcsFile->fixer->endChangeset();

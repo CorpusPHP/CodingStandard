@@ -55,7 +55,7 @@ class ReturnTrailingNewlineSniff implements Sniff {
 		$fix = $phpcsFile->addFixableError(
 			'There must be no blank lines between return and the following curly brace',
 			$stackPtr,
-			self::CODE_RETURN_HAS_TRAILING_NEWLINE
+			self::CODE_RETURN_HAS_TRAILING_NEWLINE,
 		);
 		if( $fix ) {
 			$phpcsFile->fixer->beginChangeset();

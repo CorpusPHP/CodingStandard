@@ -5,6 +5,7 @@ test: cs
 .PHONY: cs
 cs:
 	./vendor/bin/phpcs
+	./vendor/bin/php-cs-fixer fix --dry-run --diff
 
 .PHONY: cbf
 cbf:
