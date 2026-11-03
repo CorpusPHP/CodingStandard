@@ -1,5 +1,6 @@
 <mddoc>
-	<docpage target="README.md" autoloader="psr0" autoloader-root="src">
+	<autoloader type="psr0" root="src"/>
+	<docpage target="README.md">
 		<section title="Corpus Coding Standard">
 			<badge-poser type="version"/>
 			<badge-poser type="downloads"/>

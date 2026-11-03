@@ -10,10 +10,10 @@ Corpus Coding Standard for [PHP_CodeSniffer](https://github.com/squizlabs/PHP_Co
 
 ## Requirements
 
-- **dealerdirect/phpcodesniffer-composer-installer**: *
-- **squizlabs/php_codesniffer**: ^4.0
-- **slevomat/coding-standard**: ^8.23
 - **php**: >=7.4
+- **dealerdirect/phpcodesniffer-composer-installer**: *
+- **slevomat/coding-standard**: ^8.31
+- **squizlabs/php_codesniffer**: ^4.0
 
 ## Installing
 
@@ -91,7 +91,7 @@ if(
     $foo &&
     $bar &&
     $baz
-)}
+){}
 ```
 
 Becomes:
@@ -101,7 +101,7 @@ if(
     $foo
     && $bar
     && $baz
-)}
+){}
 ```
 
 ### Class: Corpus\Sniffs\General\ReturnTrailingNewlineSniff
