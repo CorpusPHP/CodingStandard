@@ -19,7 +19,7 @@ function makeRefLink( string $ref ) : string {
 	$parts = explode('.', $ref);
 
 	if( in_array($parts[0], [ 'Generic', 'MySource', 'PEAR', 'PSR1', 'PSR12', 'PSR2', 'Squiz', 'Zend' ]) ) {
-		return "[{$ref}](https://github.com/squizlabs/PHP_CodeSniffer/blob/master/src/Standards/{$parts[0]}/Sniffs/{$parts[1]}/{$parts[2]}Sniff.php)";
+		return "[{$ref}](https://github.com/PHPCSStandards/PHP_CodeSniffer/blob/4.x/src/Standards/{$parts[0]}/Sniffs/{$parts[1]}/{$parts[2]}Sniff.php)";
 	}
 
 	if( $parts[0] === 'SlevomatCodingStandard' ) {

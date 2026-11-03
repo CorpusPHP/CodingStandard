@@ -6,7 +6,7 @@
 [![ci.yml](https://github.com/CorpusPHP/CodingStandard/actions/workflows/ci.yml/badge.svg)](https://github.com/CorpusPHP/CodingStandard/actions/workflows/ci.yml)
 
 
-Corpus Coding Standard for [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer).
+Corpus Coding Standard for [PHP_CodeSniffer](https://github.com/PHPCSStandards/PHP_CodeSniffer).
 
 ## Requirements
 
@@ -182,22 +182,22 @@ class MethodParameterFormattingSniff {
 
 ### Inherited Sniffs
 
-- [Generic.ControlStructures.InlineControlStructure](https://github.com/squizlabs/PHP_CodeSniffer/blob/master/src/Standards/Generic/Sniffs/ControlStructures/InlineControlStructureSniff.php)  
-- [Generic.WhiteSpace.DisallowSpaceIndent](https://github.com/squizlabs/PHP_CodeSniffer/blob/master/src/Standards/Generic/Sniffs/WhiteSpace/DisallowSpaceIndentSniff.php)  
-- [Generic.Files.ByteOrderMark](https://github.com/squizlabs/PHP_CodeSniffer/blob/master/src/Standards/Generic/Sniffs/Files/ByteOrderMarkSniff.php)  
-- [Generic.Files.LineEndings](https://github.com/squizlabs/PHP_CodeSniffer/blob/master/src/Standards/Generic/Sniffs/Files/LineEndingsSniff.php)  
-- [Generic.PHP.LowerCaseConstant](https://github.com/squizlabs/PHP_CodeSniffer/blob/master/src/Standards/Generic/Sniffs/PHP/LowerCaseConstantSniff.php)  
-- [Generic.PHP.LowerCaseKeyword](https://github.com/squizlabs/PHP_CodeSniffer/blob/master/src/Standards/Generic/Sniffs/PHP/LowerCaseKeywordSniff.php)  
-- [Generic.PHP.DeprecatedFunctions](https://github.com/squizlabs/PHP_CodeSniffer/blob/master/src/Standards/Generic/Sniffs/PHP/DeprecatedFunctionsSniff.php)  
-- [Generic.NamingConventions.UpperCaseConstantName](https://github.com/squizlabs/PHP_CodeSniffer/blob/master/src/Standards/Generic/Sniffs/NamingConventions/UpperCaseConstantNameSniff.php)  
-- [Generic.Formatting.SpaceAfterCast](https://github.com/squizlabs/PHP_CodeSniffer/blob/master/src/Standards/Generic/Sniffs/Formatting/SpaceAfterCastSniff.php) \[ spacing=0 \]  
-- [Generic.Functions.OpeningFunctionBraceKernighanRitchie](https://github.com/squizlabs/PHP_CodeSniffer/blob/master/src/Standards/Generic/Sniffs/Functions/OpeningFunctionBraceKernighanRitchieSniff.php)  
-- [PSR2.Files.ClosingTag](https://github.com/squizlabs/PHP_CodeSniffer/blob/master/src/Standards/PSR2/Sniffs/Files/ClosingTagSniff.php)  
-- [PSR2.Classes.PropertyDeclaration](https://github.com/squizlabs/PHP_CodeSniffer/blob/master/src/Standards/PSR2/Sniffs/Classes/PropertyDeclarationSniff.php)  
-- [PEAR.Functions.ValidDefaultValue](https://github.com/squizlabs/PHP_CodeSniffer/blob/master/src/Standards/PEAR/Sniffs/Functions/ValidDefaultValueSniff.php)  
-- [Squiz.Classes.LowercaseClassKeywords](https://github.com/squizlabs/PHP_CodeSniffer/blob/master/src/Standards/Squiz/Sniffs/Classes/LowercaseClassKeywordsSniff.php)  
-- [Squiz.Classes.SelfMemberReference](https://github.com/squizlabs/PHP_CodeSniffer/blob/master/src/Standards/Squiz/Sniffs/Classes/SelfMemberReferenceSniff.php)  
-- [Squiz.Scope.MethodScope](https://github.com/squizlabs/PHP_CodeSniffer/blob/master/src/Standards/Squiz/Sniffs/Scope/MethodScopeSniff.php)  
+- [Generic.ControlStructures.InlineControlStructure](https://github.com/PHPCSStandards/PHP_CodeSniffer/blob/4.x/src/Standards/Generic/Sniffs/ControlStructures/InlineControlStructureSniff.php)  
+- [Generic.WhiteSpace.DisallowSpaceIndent](https://github.com/PHPCSStandards/PHP_CodeSniffer/blob/4.x/src/Standards/Generic/Sniffs/WhiteSpace/DisallowSpaceIndentSniff.php)  
+- [Generic.Files.ByteOrderMark](https://github.com/PHPCSStandards/PHP_CodeSniffer/blob/4.x/src/Standards/Generic/Sniffs/Files/ByteOrderMarkSniff.php)  
+- [Generic.Files.LineEndings](https://github.com/PHPCSStandards/PHP_CodeSniffer/blob/4.x/src/Standards/Generic/Sniffs/Files/LineEndingsSniff.php)  
+- [Generic.PHP.LowerCaseConstant](https://github.com/PHPCSStandards/PHP_CodeSniffer/blob/4.x/src/Standards/Generic/Sniffs/PHP/LowerCaseConstantSniff.php)  
+- [Generic.PHP.LowerCaseKeyword](https://github.com/PHPCSStandards/PHP_CodeSniffer/blob/4.x/src/Standards/Generic/Sniffs/PHP/LowerCaseKeywordSniff.php)  
+- [Generic.PHP.DeprecatedFunctions](https://github.com/PHPCSStandards/PHP_CodeSniffer/blob/4.x/src/Standards/Generic/Sniffs/PHP/DeprecatedFunctionsSniff.php)  
+- [Generic.NamingConventions.UpperCaseConstantName](https://github.com/PHPCSStandards/PHP_CodeSniffer/blob/4.x/src/Standards/Generic/Sniffs/NamingConventions/UpperCaseConstantNameSniff.php)  
+- [Generic.Formatting.SpaceAfterCast](https://github.com/PHPCSStandards/PHP_CodeSniffer/blob/4.x/src/Standards/Generic/Sniffs/Formatting/SpaceAfterCastSniff.php) \[ spacing=0 \]  
+- [Generic.Functions.OpeningFunctionBraceKernighanRitchie](https://github.com/PHPCSStandards/PHP_CodeSniffer/blob/4.x/src/Standards/Generic/Sniffs/Functions/OpeningFunctionBraceKernighanRitchieSniff.php)  
+- [PSR2.Files.ClosingTag](https://github.com/PHPCSStandards/PHP_CodeSniffer/blob/4.x/src/Standards/PSR2/Sniffs/Files/ClosingTagSniff.php)  
+- [PSR2.Classes.PropertyDeclaration](https://github.com/PHPCSStandards/PHP_CodeSniffer/blob/4.x/src/Standards/PSR2/Sniffs/Classes/PropertyDeclarationSniff.php)  
+- [PEAR.Functions.ValidDefaultValue](https://github.com/PHPCSStandards/PHP_CodeSniffer/blob/4.x/src/Standards/PEAR/Sniffs/Functions/ValidDefaultValueSniff.php)  
+- [Squiz.Classes.LowercaseClassKeywords](https://github.com/PHPCSStandards/PHP_CodeSniffer/blob/4.x/src/Standards/Squiz/Sniffs/Classes/LowercaseClassKeywordsSniff.php)  
+- [Squiz.Classes.SelfMemberReference](https://github.com/PHPCSStandards/PHP_CodeSniffer/blob/4.x/src/Standards/Squiz/Sniffs/Classes/SelfMemberReferenceSniff.php)  
+- [Squiz.Scope.MethodScope](https://github.com/PHPCSStandards/PHP_CodeSniffer/blob/4.x/src/Standards/Squiz/Sniffs/Scope/MethodScopeSniff.php)  
 - [SlevomatCodingStandard.Namespaces.UnusedUses](https://github.com/slevomat/coding-standard/blob/master/doc/namespaces.md#slevomatcodingstandardnamespacesunuseduses-) \[ searchAnnotations=true \]  
 - [SlevomatCodingStandard.Namespaces.DisallowGroupUse](https://github.com/slevomat/coding-standard/blob/master/doc/namespaces.md#slevomatcodingstandardnamespacesdisallowgroupuse)  
 - [SlevomatCodingStandard.Namespaces.MultipleUsesPerLine](https://github.com/slevomat/coding-standard/blob/master/doc/namespaces.md#slevomatcodingstandardnamespacesmultipleusesperline)  
