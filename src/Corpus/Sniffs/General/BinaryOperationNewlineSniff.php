@@ -50,7 +50,7 @@ class BinaryOperationNewlineSniff implements Sniff {
 			'Boolean %s should start line and not end previous line',
 			$stackPtr,
 			self::CODE_BOOLEAN_OPERATION_SHOULD_LEAD_LINE,
-			[ $tokens[$stackPtr]['content'] ]
+			[ $tokens[$stackPtr]['content'] ],
 		);
 
 		if( $fix ) {

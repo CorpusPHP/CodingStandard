@@ -197,7 +197,7 @@ abstract class TestCase extends \PHPUnit\Framework\TestCase {
 	protected static function assertAllFixedInFile( File $phpcsFile ) : void {
 		$phpcsFile->disableCaching();
 		$phpcsFile->fixer->fixFile();
-		self::assertStringEqualsFile(\preg_replace('~(\\.php)$~', '.fixed\\1', $phpcsFile->getFilename()), $phpcsFile->fixer->getContents());
+		self::assertStringEqualsFile(\preg_replace('~(\.php)$~', '.fixed\1', $phpcsFile->getFilename()), $phpcsFile->fixer->getContents());
 	}
 
 	/**

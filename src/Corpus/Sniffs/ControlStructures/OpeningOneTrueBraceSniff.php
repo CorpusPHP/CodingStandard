@@ -61,7 +61,7 @@ class OpeningOneTrueBraceSniff implements Sniff {
 		$fix = $phpcsFile->addFixableError(
 			'Opening brace should be on the same line as the declaration',
 			$stackPtr,
-			self::CODE_BRACE_ON_NEWLINE
+			self::CODE_BRACE_ON_NEWLINE,
 		);
 		if( $fix ) {
 			$phpcsFile->fixer->beginChangeset();

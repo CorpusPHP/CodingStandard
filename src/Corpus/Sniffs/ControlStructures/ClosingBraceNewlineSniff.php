@@ -65,7 +65,7 @@ class ClosingBraceNewlineSniff implements Sniff {
 		$fix = $phpcsFile->addFixableError(
 			'Must be a newline following closing curly bracket',
 			$stackPtr,
-			self::CODE_MUST_NEWLINE_FOLLOWING_CURLY_BRACKET
+			self::CODE_MUST_NEWLINE_FOLLOWING_CURLY_BRACKET,
 		);
 		if( $fix ) {
 			$phpcsFile->fixer->beginChangeset();
