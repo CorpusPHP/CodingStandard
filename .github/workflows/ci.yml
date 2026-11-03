@@ -29,6 +29,4 @@ jobs:
         run: composer install
 
       - name: Run tests
-        env:
-          PHP_CS_FIXER_IGNORE_ENV: ${{ matrix.php-versions == '8.6' && '1' || '0' }}
         run: make test

@@ -17,7 +17,7 @@
 		"ext-dom": "*",
 		"corpus/php-cs-fixer-config": "^0.1.1",
 		"donatj/drop": "^1.0",
-		"friendsofphp/php-cs-fixer": "^3.14",
+		"friendsofphp/php-cs-fixer": "^3.95",
 		"nikic/php-parser": "^4",
 		"phpunit/phpunit": "^9.6"
 	},

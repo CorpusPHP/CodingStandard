@@ -6,6 +6,7 @@ use PhpCsFixer\Finder;
 $config = Config::php7x4();
 
 return $config
+	->setUnsupportedPhpVersionAllowed(true)
 	->setRules(array_merge(
 		[ '@PHPUnit84Migration:risky' => true ],
 		$config->getRules(),
